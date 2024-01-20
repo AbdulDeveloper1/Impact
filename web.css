@@ -1103,7 +1103,7 @@ footer  li{
 footer li a{
     color: rgb(195, 192, 192);
     text-decoration: none;
-    font-size: 7px;
+ 
     transition: all 0.3s ease;
 }
 footer li a:hover{
@@ -1317,25 +1317,30 @@ footer .copyright{
     
 }
 @media screen and(max-width:700px){
-    
+     nav{
+        height: 100%;
+     }   
     .pricing .featured{
         border: none;
         width: 100%;
     }
-    
+    .pricing .featured{
+        display: none;
+    }
     
 }
 @media screen and (max-width:400px){
 
     header .logo{
-        font-size: 18px;
+        font-size: 25px;
     }
     header .menubar{
-        font-size: 19px;
+        font-size: 22px;
     }
 
     nav{
         width: 100%;
+        height: 100%;
     }
     body{
         overflow-x: hidden;
@@ -1345,13 +1350,20 @@ footer .copyright{
         flex-direction: column;
         width: 100%;
     }
-    .home .impact .row .btn i{
-        font-size: 8px;
-        padding: 8px 12px;
+    .home .impact .row .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+    .home .impact .row .btn i{
+        font-size: 15px;
+        
+    }
+    
+
     .home .impact .row .btn button{
         padding: 8px 12px;
-        font-size: 7px;
+        font-size: 15px;
     } 
    .home .impact .row h1{
     font-size: 18px;
@@ -1361,21 +1373,37 @@ footer .copyright{
     word-break: break-all;
     text-align: center;
    }
+   .cont-1 .boxes .box{
+    padding: 12px 17px;
+    width:200px;
+    text-align: center;
+   }
+   .cont-1 .boxes .box .icon i{
+    font-size: 22px;
+    margin-bottom: 20px;
+   }
+   .cont-1 .boxes .box p{
+    font-size: 17px;
+   }
+   .client .container .row .text{
+    font-size: 12px;
+   }
    .service .cart{
     width: 100%;
    }
-    .home .impact .row-1 .image img{
-        width: 100%;
-    }
+   .home{
+    height: 100%;
+   }
+    
     .client .content{
         padding: 10px;
     }
     .client .content .pra p{
-        font-size: 8px;
+        font-size: 12px;
     }
     
     .client .content .btn button{
-        font-size: 8px;
+        font-size: 15px;
         padding: 8px 12px;
     }
     .protfolio .nav{
@@ -1399,14 +1427,12 @@ footer .copyright{
         gap: 30px;
     }
     .questions .according .according-content .text{
-        font-size: 12px;
+        font-size: 15px;
     }
     .contact .info .icon i{
-        font-size: 12px;
+        font-size: 14px;
     }
-    .contact .info{
-        font-size: 8px;
-    }
+    
     .contact .cont-container .input{
         display: flex;
         flex-direction: column;
@@ -1435,5 +1461,8 @@ footer .copyright{
     footer .social-link{
         display: flex;
         justify-content: center;
+    }
+    footer .container .row li a{
+        font-size: 15px;
     }
  }
