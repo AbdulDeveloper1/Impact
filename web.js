@@ -46,9 +46,11 @@ const dropdown = document.querySelector('.dropdown')
  
   function CallBar(){
     nav.classList.add('actives')
+    document.body.classList.add('no-scroll')
   }
   function Exitrbar(){
     nav.classList.remove('actives')
+    document.body.classList.remove('no-scroll')
   }
   
    nav.onclick=()=>{
