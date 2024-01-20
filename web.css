@@ -1140,7 +1140,7 @@ footer .copyright{
         nav{
            position: fixed;
            top: 0px;
-           left: -100%;
+           left: -200%;
            width: 450px;
            background-color:#008374 ;
            height: 100%;
@@ -1325,3 +1325,115 @@ footer .copyright{
     
     
 }
+@media screen and (max-width:400px){
+
+    header .logo{
+        font-size: 18px;
+    }
+    header .menubar{
+        font-size: 19px;
+    }
+
+    nav{
+        width: 100%;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .home .row{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .home .impact .row .btn i{
+        font-size: 8px;
+        padding: 8px 12px;
+    }
+    .home .impact .row .btn button{
+        padding: 8px 12px;
+        font-size: 7px;
+    } 
+   .home .impact .row h1{
+    font-size: 18px;
+    text-align: center;
+   }
+   .home .impact .row p{
+    word-break: break-all;
+    text-align: center;
+   }
+   .service .cart{
+    width: 100%;
+   }
+    .home .impact .row-1 .image img{
+        width: 100%;
+    }
+    .client .content{
+        padding: 10px;
+    }
+    .client .content .pra p{
+        font-size: 8px;
+    }
+    
+    .client .content .btn button{
+        font-size: 8px;
+        padding: 8px 12px;
+    }
+    .protfolio .nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .pricing .pricing-item .image img{
+        width: 100%;
+    }
+    .protfolio .preview .preview-cart{
+        max-width: 100%;
+    }
+    .pricing .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .questions .according .according-content .text{
+        font-size: 12px;
+    }
+    .contact .info .icon i{
+        font-size: 12px;
+    }
+    .contact .info{
+        font-size: 8px;
+    }
+    .contact .cont-container .input{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .contact .cont-container .input input{
+        margin-right: 0;
+    }
+
+   
+    .pricing .featured{
+        display: none;
+
+    }
+    footer .container .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .copyright{
+        font-size: 12px;
+    }
+    footer .social-link{
+        display: flex;
+        justify-content: center;
+    }
+ }
