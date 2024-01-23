@@ -8,8 +8,12 @@
         --background-color:#008374;
         --opacity : 0.5; 
     }
- body.no-scroll{
+
+    body.no-scroll{
         overflow-y:hidden;
+    }
+    html{
+        scroll-behavior: smooth;
     }
 header {
     display: flex;
@@ -32,11 +36,18 @@ header {
     color: white;
     font-weight: 600;
 }
-
+.logo-1{
+    display: none;
+    font-size: 25px;
+    font-weight: 800;
+    color:#ccc9c9;
+    text-transform: uppercase;
+}
 nav {
     display: flex;
     align-items: center;
 }
+
 
 nav a {
     text-decoration: none;
@@ -44,7 +55,24 @@ nav a {
     margin-inline: 20px;
     color: #ccc9c9;
     transition: all 0.4s ease;
+    display: inline-block;
+    position: relative;
 }
+nav a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background-color: rgb(222, 39, 76);
+    transition: all 0.3s ease;
+}
+nav a:hover::before{
+    width: 100%;
+}
+
 
 nav a:hover {
     color: white;
@@ -56,6 +84,19 @@ nav a:hover {
     transition: all 0.3s ease;
     display: none;
 }
+.about .drophome .fa-arrow-up{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 15px;
+    font-size: 25px;
+    background-color: #006459;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none;
+}
+
 .exit {
     font-size: 30px;
     color: #ccc9c9;
@@ -102,7 +143,7 @@ nav a:hover {
 
 .dropdown-containers {
     position: relative;
-    width: 350px;
+    width: 380px;
 }
 
 .dropdowns {
@@ -173,8 +214,8 @@ nav a:hover {
 }
 
 .btn button {
-    padding: 20px;
-    padding-inline: 50px;
+    padding: 15px;
+    padding-inline: 30px;
     border-radius: 35px;
     border: 1px solid gray;
     margin-right: 35px;
@@ -1340,11 +1381,21 @@ footer .copyright{
     header .menubar{
         font-size: 22px;
     }
+    .logo{
+        display: none;
+    }
+    .logo-1{
+        display: block;
+
+    }
 
     nav{
         width: 100%;
         height: 100vh;
-        overflow-y:auto;
+        overflow-y:auto ;
+    }
+    .nav .bg-nav{
+        display: none;
     }
     body{
         overflow-x: hidden;
@@ -1353,6 +1404,9 @@ footer .copyright{
         display: flex;
         flex-direction: column;
         width: 100%;
+    }
+    .about .drophome .fa-arrow-up{
+        display: block;
     }
     .home .impact .row .btn{
         display: flex;
