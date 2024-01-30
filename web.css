@@ -31,6 +31,8 @@ header {
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
 }
 
+
+
 .logo {
     font-size: 35px;
     color: white;
@@ -84,7 +86,7 @@ nav a:hover {
     transition: all 0.3s ease;
     display: none;
 }
-.about .drophome .fa-arrow-up{
+.about .drophome{
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -94,6 +96,7 @@ nav a:hover {
     color: white;
     cursor: pointer;
     border-radius: 5px;
+    z-index: 9999;
     display: none;
 }
 
@@ -265,7 +268,7 @@ nav a:hover {
     text-align: center;
     z-index: 1;
     margin-inline: 20px;
-
+    margin-bottom: 30px;
 }
 
 .box .icon i {
@@ -273,7 +276,10 @@ nav a:hover {
     font-size: 40px;
     margin-bottom: 50px;
 }
-
+.box-col{
+    display: flex;
+    gap: 20px;
+}
 .box p {
     color: white;
     font-size: 25px;
@@ -597,7 +603,13 @@ nav a:hover {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    cursor: pointer;
 }
+
+.protfolio .nav a.active{
+    color: #008374;
+}
+
 .protfolio .nav a:hover{
     color: #008374;
 }
@@ -1360,7 +1372,11 @@ footer .copyright{
     }
     
 }
-@media screen and(max-width:700px){
+@media screen and(max-width:799px){
+    .home{
+        height: 100%;
+    }
+    
      nav{
         height: 100%;
      }   
@@ -1371,9 +1387,58 @@ footer .copyright{
     .pricing .featured{
         display: none;
     }
+    .cont-1 .boxes .box {
+        max-width: 200px;
+    }
+}
+@media screen and (max-width:699px) {
+    .cont-1 .boxes .box-col{
+        display: flex;
+        justify-content: center;
+    }
+    .cont-1 .boxes .box {
+        max-width: 200px;
+    }
     
 }
-@media screen and (max-width:400px){
+@media screen and (max-width:550px) {
+    .home{
+        height: 100%;
+    }
+    .pricing .featured{
+        display: none;
+    }
+    .cont-1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-col{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+    .box{
+        max-width: 150px;
+        display: inline-block;
+        text-align: center;
+    } 
+    .about .contains .coloum-2{
+            display: none;
+    }
+    .client .row .content{
+        display: none;
+    }
+    .box .icon{
+        font-size: 12px;
+    }
+    .cont-1 .boxes .box p{
+        font-size: 15px;
+    }
+    
+}
+@media screen and (max-width:500px){
 
     header .logo{
         font-size: 25px;
@@ -1381,6 +1446,28 @@ footer .copyright{
     header .menubar{
         font-size: 22px;
     }
+    .boxes{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .box-col{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .box{
+        max-width: 120px;
+        text-align: center;
+    }
+    .box .icon{
+        font-size: 12px;
+    }
+    .cont-1 .boxes .box p{
+        font-size: 8px;
+    }
+   
     .logo{
         display: none;
     }
@@ -1405,9 +1492,7 @@ footer .copyright{
         flex-direction: column;
         width: 100%;
     }
-    .about .drophome .fa-arrow-up{
-        display: block;
-    }
+  
     .home .impact .row .btn{
         display: flex;
         justify-content: center;
@@ -1431,9 +1516,13 @@ footer .copyright{
     word-break: break-all;
     text-align: center;
    }
+   .cont-1 .boxes .box-col{
+    display: flex;
+    justify-content: center;
+   }
    .cont-1 .boxes .box{
-    padding: 12px 17px;
-    width:200px;
+    padding: 15px 17px;
+    max-width:120px;
     text-align: center;
    }
    .cont-1 .boxes .box .icon i{
@@ -1464,6 +1553,9 @@ footer .copyright{
         font-size: 15px;
         padding: 8px 12px;
     }
+    .protfolio .nav a{
+        font-size: 16px;
+    }
     .protfolio .nav{
         display: flex;
         flex-direction: column;
@@ -1474,8 +1566,17 @@ footer .copyright{
     .pricing .pricing-item .image img{
         width: 100%;
     }
+    .preview-cart .image img{
+        max-width: 150px;
+    }
     .protfolio .preview .preview-cart{
-        max-width: 100%;
+        max-width: 150px;
+    }
+    .preview-cart .detail {
+        font-size:15px;
+    }
+    .preview .preview-cart .detail h1{
+        font-size: 18px;
     }
     .pricing .row{
         display: flex;
